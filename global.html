@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global Green</title>
+  <link rel="stylesheet" href="gloibal.css">
+  <style>
+
+    #bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      color: #fff;
+    }
+
+    .model-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 50px 0;
+    }
+
+    .model-frame {
+      width: 90%;
+      max-width: 1000px;
+      height: 600px;
+      border: none;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    }
+
+    header, footer, section {
+      position: relative;
+      z-index: 1;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 10px;
+      margin: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-right: 15px;
+      font-weight: bold;
+      padding: 10px 15px;
+      transition: font-size 0.3s ease, background-color 0.3s ease;
+      border-radius: 5px;
+    }
+
+    nav a.active {
+      text-decoration: underline;
+    }
+
+    nav a:hover {
+      font-size: 1.3em; 
+      background-color: white;
+      color: #004400; 
+    }
+  </style>
+</head>
+<body>
+  <video autoplay muted loop playsinline id="bg-video">
+    <source src="595838_Drone Landscape_Nature_3840x2160.mp4" type="video/mp4">
+    Ваш браузер не поддерживает видео.
+  </video>
+
+  <header>
+    <div class="logo">GLOBAL GREEN<br><span>ЗАГРЯЗНЕНИЕ ВОЗДУХА И ВОДЫ</span></div>
+    <nav>
+      <a class="active" href="#">Главная</a>
+      <a href="about.html">О КОМПАНИИ</a>
+      <a href="magazin.html">МАГАЗИН</a>
+      <a href="contacts.html">КОНТАКТЫ</a>
+      <a href="voda.html" class="pollution-link">ЗАГРЯЗНЕНИЕ ВОДЫ</a>
+      <a href="admin.html">УПРАВЛЕНИЕ ТОВАРАМИ</a>
+    </nav>
+  </header>
+
+  <section class="realtime-section">
+    <div class="realtime-block">
+      <div style="background-color: #009900; color: white; padding: 10px 15px; border-radius: 13px; width: 90%; text-align: center; margin-bottom: 15px;">
+        Глобальная карта экологических угроз
+      </div>
+
+      <iframe 
+        src="https://embed.windy.com/embed2.html?lat=40&lon=20&detailLat=0&detailLon=0&width=100%&height=500&zoom=2&level=surface&overlay=pm2p5&menu=&message=true&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=false&metricWind=default&metricTemp=default&radarRange=-1" 
+        width="100%" 
+        height="500"
+        style="border-radius: 13px;">
+      </iframe>
+    </div>
+    <div class="realtime-block" style="max-width: 45%;">
+      <div style="background-color: #009900; color: white; padding: 10px 15px; border-radius: 13px; text-align: center; margin-bottom: 15px;">
+        Рейтинг городов с самым грязным воздухом
+      </div>
+
+      <ul style="background-color: white; color: #004400; padding: 15px; border-radius: 13px; list-style: none; font-weight: bold;">
+        <li><img src="https://flagcdn.com/w40/pk.png" alt="Пакистан" style="width: 24px; vertical-align: middle;"> Лахор, Пакистан</li>
+        <li><img src="https://flagcdn.com/w40/in.png" alt="Индия" style="width: 24px; vertical-align: middle;"> Дели, Индия</li>
+        <li><img src="https://flagcdn.com/w40/bd.png" alt="Бангладеш" style="width: 24px; vertical-align: middle;"> Дакка, Бангладеш</li>
+        <li><img src="https://flagcdn.com/w40/kg.png" alt="Кыргызстан" style="width: 24px; vertical-align: middle;"> Бишкек, Кыргызстан</li>
+        <li><img src="https://flagcdn.com/w40/af.png" alt="Афганистан" style="width: 24px; vertical-align: middle;"> Кабул, Афганистан</li>
+      </ul>
+
+      <div style="background-color: white; color: #004400; padding: 10px 15px; border-radius: 13px; margin-top: 15px; text-align: center;">
+        <strong>Годы с самым высоким загрязнением:</strong><br>
+        2020, 2021, 2022, 2023, 2024
+      </div>
+    </div>
+  </section>
+  
+  <div style="display: flex; justify-content: space-between; margin-top: 20px; gap: 20px;">
+    <div style="flex: 1;">
+      <div style="background-color: #009900; color: white; padding: 10px 15px; border-radius: 13px; text-align: center; margin-bottom: 10px;">
+        Самые чистые города
+      </div>
+      <div style="background-color: white; color: #004400; padding: 15px; border-radius: 13px; font-weight: bold;">
+        <p><img src="https://flagcdn.com/w40/fi.png" alt="Финляндия" style="width: 24px; vertical-align: middle;"> Хельсинки, Финляндия</p>
+        <p><img src="https://flagcdn.com/w40/nz.png" alt="Новая Зеландия" style="width: 24px; vertical-align: middle;"> Веллингтон, Новая Зеландия</p>
+        <p><img src="https://flagcdn.com/w40/ca.png" alt="Канада" style="width: 24px; vertical-align: middle;"> Ванкувер, Канада</p>
+      </div>
+    </div>
+    <div style="flex: 1;">
+      <div style="background-color: #990000; color: white; padding: 10px 15px; border-radius: 13px; text-align: center; margin-bottom: 10px;">
+        Самые загрязнённые города
+      </div>
+      <div style="background-color: white; color: #004400; padding: 15px; border-radius: 13px; font-weight: bold;">
+        <p><img src="https://flagcdn.com/w40/pk.png" alt="Пакистан" style="width: 24px; vertical-align: middle;"> Лахор, Пакистан</p>
+        <p><img src="https://flagcdn.com/w40/in.png" alt="Индия" style="width: 24px; vertical-align: middle;"> Дели, Индия</p>
+        <p><img src="https://flagcdn.com/w40/bd.png" alt="Бангладеш" style="width: 24px; vertical-align: middle;"> Дакка, Бангладеш</p>
+      </div>
+    </div>
+  </div>
+
+  <section class="causes">
+    <h2>Основные причины загрязнение воздуха:</h2>
+    <div class="cause-grid">
+      <div><img src="smoke-3193050_1920-1-1-1.jpg"><p>Сжигание угля</p></div>
+      <div><img src="gen340_3072760.jpg"><p>Выброс Азота</p></div>
+      <div><img src="zagryazneniye-1-4-1.jpg"><p>Пожары</p></div>
+    </div>
+  </section>
+
+  <style>
+  .solutions {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .solution-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .solution-grid > div {
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+  }
+
+  .solution-grid img {
+    width: 100%;
+    max-width: 500px;
+    height: 550px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .solution-grid p {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+</style>
+
+<section class="solutions">
+  <h3>РЕШЕНИЕ:</h3>
+
+  <div class="solution-grid">
+
+    <div>
+      <a href="https://kaminfontan.ru/category/dymohody/" target="_blank">
+        <img src="harakteristiki-metallicheskih-dymohodov.jpg"
+             alt="ЭКО ДЫМОХОД">
+      </a>
+      <p>ЭКО ДЫМОХОД</p>
+    </div>
+
+    <div>
+      <a href="https://mi-shop.kg/product-category/tovary-dlya-doma-i-ofisa/klimaticheskoe-oborudovanie/" target="_blank">
+        <img src="air-purifier-2s-white-1-300x300.jpg"
+             alt="ОЧИСТИТЕЛЬ ВОЗДУХА">
+      </a>
+      <p>ОЧИСТИТЕЛЬ ВОЗДУХА</p>
+    </div>
+
+    <div>
+      <a href="https://yandex.com/maps/org/katal_service/21412805402/?ll=74.637864%2C42.879187&z=17" target="_blank">
+        <img src="mmm.jpg" alt="КАТАЛИЗАТОР">
+      </a>
+      <p>КАТАЛИЗАТОР</p>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p>"Чистый воздух — это не роскошь, а право каждого человека."</p>
+  <p><strong>www.global.green.kg©2025</strong></p>
+</footer>
+</body>
+</html>

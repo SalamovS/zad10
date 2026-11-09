@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global Green</title>
+  <link rel="stylesheet" href="gloibal.css">
+  <style>
+    #bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      color: #fff;
+    }
+
+    .model-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 50px 0;
+    }
+
+    .model-frame {
+      width: 90%;
+      max-width: 1000px;
+      height: 600px;
+      border: none;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    }
+
+    header, footer, section {
+      position: relative;
+      z-index: 1;
+      background-color: rgba(0, 0, 0, 0.6); 
+      padding: 20px;
+      border-radius: 10px;
+      margin: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-right: 15px;
+      font-weight: bold;
+      padding: 10px 15px;
+      transition: font-size 0.3s ease, background-color 0.3s ease; 
+      border-radius: 5px;
+    }
+
+    nav a.active {
+      text-decoration: underline;
+    }
+
+    nav a:hover {
+      font-size: 1.3em;
+      background-color: white; 
+      color: #004400; 
+    }
+  </style>
+</head>
+<body>
+  <video autoplay muted loop playsinline id="bg-video">
+    <source src="595838_Drone Landscape_Nature_3840x2160.mp4" type="video/mp4">
+    Ваш браузер не поддерживает видео.
+  </video>
+
+  <header>
+    <div class="logo">GLOBAL GREEN<br><span>ЗАГРЯЗНЕНИЕ ВОЗДУХА И ВОДЫ</span></div>
+    <nav>
+      <a class="active" href="global.html">Главная</a>
+      <a href="about.html">О КОМПАНИИ</a>
+      <a href="magazin.html">МАГАЗИН</a>
+      <a href="contacts.html">КОНТАКТЫ</a>
+      <a href="#" class="pollution-link">ЗАГРЯЗНЕНИЕ ВОДЫ</a>
+      <a href="admin.html">УПРАВЛЕНИЕ ТОВАРАМИ</a>
+    </nav>
+  </header>
+
+  <section class="realtime-section">
+    <div class="realtime-block">
+      <div style="background-color: #009900; color: white; padding: 10px 15px; border-radius: 13px; width: 90%; text-align: center; margin-bottom: 15px;">
+        Глобальная карта загрязнения воды
+      </div>
+
+      <iframe 
+        src="https://realearth.ssec.wisc.edu/?products=CW-dineof-kd490.100&basemap=bw&animationspeed=75&drawColor=red&drawWidth=2"
+    width="100%" 
+    height="600" 
+    style="border: 1px solid black; border-radius: 12px; margin: 0 20px; margin-left: 5px;">
+      </iframe>
+    </div>
+    
+    <div class="realtime-block" style="max-width: 45%;">
+      <div style="background-color: #009900; color: white; padding: 10px 15px; border-radius: 13px; text-align: center; margin-bottom: 15px;">
+        Рейтинг стран с самой грязной водой
+      </div>
+
+      <ul style="background-color: white; color: #004400; padding: 15px; border-radius: 13px; list-style: none; font-weight: bold;">
+        <li><img src="https://flagcdn.com/w40/in.png" alt="Индия" style="width: 24px; vertical-align: middle;"> Гувахати, Индия</li>
+        <li><img src="https://flagcdn.com/w40/ng.png" alt="Нигерия" style="width: 24px; vertical-align: middle;"> Лагос, Нигерия</li>
+        <li><img src="https://flagcdn.com/w40/cn.png" alt="Китай" style="width: 24px; vertical-align: middle;"> Пекин, Китай</li>
+        <li><img src="https://flagcdn.com/w40/br.png" alt="Бразилия" style="width: 24px; vertical-align: middle;"> Рио-де-Жанейро, Бразилия</li>
+        <li><img src="https://flagcdn.com/w40/id.png" alt="Индонезия" style="width: 24px; vertical-align: middle;"> Джакарта, Индонезия</li>
+      </ul>
+
+      <div style="background-color: white; color: #004400; padding: 10px 15px; border-radius: 13px; margin-top: 15px; text-align: center;">
+        <strong>Годы с самым высоким загрязнением воды:</strong><br>
+        2020, 2021, 2022, 2023, 2024
+      </div>
+    </div>
+  </section>
+  
+  <div style="display: flex; justify-content: space-between; margin-top: 20px; gap: 20px;">
+    <div style="flex: 1;">
+      <div style="background-color: #009900; color: white; padding: 10px 15px; border-radius: 13px; text-align: center; margin-bottom: 10px;">
+        Страны с самой чистой водой
+      </div>
+      <div style="background-color: white; color: #004400; padding: 15px; border-radius: 13px; font-weight: bold;">
+        <p><img src="https://flagcdn.com/w40/fi.png" alt="Финляндия" style="width: 24px; vertical-align: middle;"> Хельсинки, Финляндия</p>
+        <p><img src="https://flagcdn.com/w40/nz.png" alt="Новая Зеландия" style="width: 24px; vertical-align: middle;"> Веллингтон, Новая Зеландия</p>
+        <p><img src="https://flagcdn.com/w40/ca.png" alt="Канада" style="width: 24px; vertical-align: middle;"> Ванкувер, Канада</p>
+      </div>
+    </div>
+    <div style="flex: 1;">
+      <div style="background-color: #990000; color: white; padding: 10px 15px; border-radius: 13px; text-align: center; margin-bottom: 10px;">
+        Страны с самой загрязнённой водой
+      </div>
+      <div style="background-color: white; color: #004400; padding: 15px; border-radius: 13px; font-weight: bold;">
+        <p><img src="https://flagcdn.com/w40/in.png" alt="Индия" style="width: 24px; vertical-align: middle;"> Гувахати, Индия</p>
+        <p><img src="https://flagcdn.com/w40/ng.png" alt="Нигерия" style="width: 24px; vertical-align: middle;"> Лагос, Нигерия</p>
+        <p><img src="https://flagcdn.com/w40/cn.png" alt="Китай" style="width: 24px; vertical-align: middle;"> Пекин, Китай</p>
+      </div>
+    </div>
+  </div>
+
+  <section class="causes">
+    <h2>Основные причины загрязнения воды:</h2>
+    <div class="cause-grid">
+      <div><img src="eeee.jpg"style="width: 75%;"><p>Нефть</p></div>
+      <div><img src="ккк.jpeg"style="width: 90%;"><p>Выброс мусора</p></div>
+    </div>
+  </section>
+
+  <section class="solutions">
+    <h3>РЕШЕНИЕ:</h3>
+    <div class="solution-grid">
+      <div>
+        <a href="https://homefilter.kg/" target="_blank">
+          <img src="27.jpg" alt="Фильтры" style="width: 75%;">
+        </a>
+        <p>ФИЛЬТР</p>
+      </div>
+      <div>
+        <a href="https://www.instagram.com/eco.demi/" target="_blank">
+          <img src="1621769965_foto5.jpg" alt="КРУЖКИ" style="width: 85%;">
+        </a>
+        <p>КРУЖКИ</p>
+      </div>
+  </section>
+
+  <footer>
+    <p>"Чистый воздух — это не роскошь, а право каждого человека."</p>
+    <p><strong>www.global.green.kg©2025</strong></p>
+  </footer>
+</body>
+</html>

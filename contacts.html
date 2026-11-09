@@ -1,0 +1,366 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакты | Global Green</title>
+  <link rel="stylesheet" href="gloibal.css">
+
+  <style>
+    #bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+
+    header, footer, section {
+      position: relative;
+      z-index: 1;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 10px;
+      margin: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-right: 15px;
+      font-weight: bold;
+      padding: 10px 15px;
+      transition: font-size 0.3s ease, background-color 0.3s ease;
+      border-radius: 5px;
+    }
+
+    nav a.active {
+      text-decoration: underline;
+    }
+
+    nav a:hover {
+      font-size: 1.2em;
+      background-color: white;
+      color: #004400;
+    }
+
+    .contact-info {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .contact-info h2 {
+      margin-bottom: 20px;
+      font-size: 1.5em;
+    }
+
+    .contact-item {
+      margin-bottom: 15px;
+      font-size: 1.2em;
+    }
+
+    .contact-item a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .contact-item a:hover {
+      text-decoration: underline;
+    }
+
+    .contact-item img {
+      width: 24px;
+      height: 24px;
+      vertical-align: middle;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 10px 20px;
+      background-color: #009900;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    .back-btn:hover {
+      background-color: #004400;
+    }
+
+    /* Форма обратной связи */
+
+    .contact-form {
+      max-width: 500px;
+      margin: 30px auto;
+      padding: 25px;
+      background-color: rgba(0, 0, 0, 0.8);
+      border-radius: 10px;
+      text-align: left;
+    }
+
+    .contact-form h2 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .contact-form p {
+      text-align: center;
+    }
+
+    .contact-form label {
+      display: block;
+      margin-top: 15px;
+      margin-bottom: 7px;
+      font-weight: bold;
+    }
+
+    .contact-form input {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .contact-form input:focus {
+      outline: none;
+      border-color: #00cc44;
+    }
+
+    .contact-form button {
+      display: block;
+      width: 100%;
+      margin-top: 25px;
+      padding: 12px;
+      background-color: #009900;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .contact-form button:hover {
+      background-color: #004400;
+    }
+
+    #message {
+      margin-top: 15px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+      header, footer, section {
+        margin: 10px;
+        padding: 15px;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 5px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <video autoplay muted loop playsinline id="bg-video">
+    <source src="595838_Drone Landscape_Nature_3840x2160.mp4"
+            type="video/mp4">
+    Ваш браузер не поддерживает видео.
+  </video>
+
+  <header>
+    <div class="logo">
+      GLOBAL GREEN<br>
+      <span>ЗАГРЯЗНЕНИЕ ВОЗДУХА И ВОДЫ</span>
+    </div>
+
+    <nav>
+      <a href="global.html">Главная</a>
+      <a href="about.html">О КОМПАНИИ</a>
+      <a href="magazin.html">МАГАЗИН</a>
+      <a class="active" href="contacts.html">КОНТАКТЫ</a>
+      <a href="admin.html">УПРАВЛЕНИЕ ТОВАРАМИ</a>
+    </nav>
+  </header>
+
+  <section class="contact-info">
+    <h2>Контактная информация</h2>
+
+    <div class="contact-item">
+      <a href="https://wa.me/996700520077" target="_blank"
+         rel="noopener noreferrer">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+             alt="WhatsApp">
+        0700520077
+      </a>
+    </div>
+
+    <div class="contact-item">
+      <a href="mailto:globalgreen@gmail.com">
+        <img src="pngwing.com.png" alt="Gmail">
+        globalgreen@gmail.com
+      </a>
+    </div>
+
+    <div class="contact-item">
+      <a href="https://www.instagram.com/global_green"
+         target="_blank" rel="noopener noreferrer">
+        <img src="klipartz.com.png" alt="Instagram">
+        global_green
+      </a>
+    </div>
+
+    <a href="global.html" class="back-btn">
+      Вернуться на главную страницу
+    </a>
+  </section>
+
+  <section class="contact-form">
+    <h2>Оставить заявку</h2>
+    <p>Заполните форму, чтобы связаться с нами.</p>
+
+    <form id="contactForm">
+
+      <label for="fullname">ФИО:</label>
+      <input
+        type="text"
+        id="fullname"
+        placeholder="Например: Иванов Иван Иванович"
+        required
+      >
+
+      <label for="phone">Номер телефона:</label>
+      <input
+        type="tel"
+        id="phone"
+        placeholder="+996700123456"
+        required
+      >
+
+      <label for="email">Электронная почта:</label>
+      <input
+        type="email"
+        id="email"
+        placeholder="example@gmail.com"
+        required
+      >
+
+      <button type="submit">Отправить</button>
+
+      <div id="message" role="status" aria-live="polite"></div>
+
+    </form>
+  </section>
+
+  <footer>
+    <p>"Чистый воздух — это не роскошь, а право каждого человека."</p>
+    <p><strong>www.global.green.kg©2025</strong></p>
+  </footer>
+
+  <script>
+    const form = document.getElementById("contactForm");
+    const message = document.getElementById("message");
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const fullname = document.getElementById("fullname").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const email = document.getElementById("email").value.trim();
+
+      const nameRegex = /^[a-zа-яё]+(?:[-'][a-zа-яё]+)*(?:\s+[a-zа-яё]+(?:[-'][a-zа-яё]+)*){1,2}$/iu;
+
+      const phoneRegex = /^(?:\+996|996|0)?[0-9\s()-]{9,15}$/;
+
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (!nameRegex.test(fullname)) {
+        message.style.color = "#ff6666";
+        message.textContent =
+          "Введите правильное ФИО: имя и фамилию, можно добавить отчество.";
+        return;
+      }
+
+
+      const digits = phone.replace(/\D/g, "");
+
+      if (!phoneRegex.test(phone) || digits.length < 9 ||
+          digits.length > 12) {
+        message.style.color = "#ff6666";
+        message.textContent = "Введите правильный номер телефона.";
+        return;
+      }
+
+
+      if (!emailRegex.test(email)) {
+        message.style.color = "#ff6666";
+        message.textContent = "Введите правильный адрес электронной почты.";
+        return;
+      }
+
+   
+      const contact = {
+        fullname: fullname,
+        phone: phone,
+        email: email,
+        date: new Date().toLocaleString("ru-RU")
+      };
+
+      try {
+
+        let contacts = JSON.parse(
+          localStorage.getItem("globalGreenContacts") || "[]"
+        );
+
+        if (!Array.isArray(contacts)) {
+          contacts = [];
+        }
+
+
+        contacts.push(contact);
+
+
+        localStorage.setItem(
+          "globalGreenContacts",
+          JSON.stringify(contacts)
+        );
+
+
+        message.style.color = "#00ff66";
+        message.textContent = "Успешно сохранено! Спасибо за заявку.";
+
+
+        form.reset();
+
+      } catch (error) {
+        message.style.color = "#ff6666";
+        message.textContent =
+          "Не удалось сохранить данные. Проверьте настройки браузера.";
+      }
+    });
+  </script>
+
+</body>
+</html>

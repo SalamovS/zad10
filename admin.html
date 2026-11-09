@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Управление товарами — GLOBAL GREEN</title>
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<header class="site-header"><div class="header-inner"><a href="global.html" class="brand"><span class="brand-icon">🌿</span><span>GLOBAL GREEN<small>ЗАГРЯЗНЕНИЕ ВОЗДУХА И ВОДЫ</small></span></a><nav><a href="global.html">Главная</a><a href="magazin.html">Магазин</a><a href="admin.html" class="active">Управление товарами</a></nav></div></header>
+<main>
+<section class="hero"><span class="eyebrow">🌱 GLOBAL GREEN · КАТАЛОГ</span><h1>Управление товарами</h1><p>Добавляйте экологические товары, просматривайте информацию, редактируйте и удаляйте записи.</p><div class="hero-actions"><button id="addBtn" class="btn btn-light">＋ Добавить товар</button><a class="btn btn-outline" href="magazin.html">Открыть магазин ↗</a></div></section>
+<section class="workspace"><div class="section-header"><div><span class="eyebrow dark">КАТАЛОГ</span><h2>Все товары <span id="count" class="count">0</span></h2></div><button id="exportBtn" class="btn btn-export"></button></div>
+<div class="tools"><label class="search-wrap"><span>⌕</span><input id="search" type="search" placeholder="Поиск по названию, категории или описанию..." autocomplete="off"></label><select id="category" aria-label="Фильтр по категориям"><option value="">Все категории</option></select></div>
+<div id="notice" class="notice" role="status" aria-live="polite"></div><div class="grid" id="productList"></div><p id="empty" class="empty" hidden>По вашему запросу ничего не найдено.</p></section>
+</main>
+<footer>🌿 GLOBAL GREEN · Чистое будущее начинается с нас</footer>
+<div class="overlay" id="formModal" aria-hidden="true"><div class="dialog" role="dialog" aria-modal="true" aria-labelledby="formTitle"><button type="button" class="icon-close" data-close="formModal" aria-label="Закрыть">×</button><span class="eyebrow dark">КАТАЛОГ ТОВАРОВ</span><h2 id="formTitle">Добавить товар</h2><form id="productForm"><input type="hidden" id="itemId"><label>Название товара <input id="name" maxlength="100" required placeholder="Например, Эко-сумка"></label><label>Категория <input id="itemCategory" maxlength="80" required placeholder="Например, Эко-товары"></label><label>Цена, сом <input id="price" type="number" min="0" max="99999999" step="0.01" required placeholder="650"></label><label>Фото товара (имя файла или ссылка) <input id="image" maxlength="500" placeholder="27.jpg"></label><label>Описание товара <textarea id="description" rows="4" maxlength="1000" required placeholder="Опишите товар..."></textarea></label><div class="dialog-actions"><button class="btn btn-cancel" type="button" data-close="formModal">Отмена</button><button class="btn btn-primary" type="submit" id="saveBtn">Сохранить товар</button></div></form></div></div>
+<div class="overlay" id="detailModal" aria-hidden="true"><div class="dialog detail-dialog" role="dialog" aria-modal="true" aria-labelledby="detailTitle"><button type="button" class="icon-close" data-close="detailModal" aria-label="Закрыть">×</button><div id="detailContent"></div></div></div>
+<script src="products-store.js"></script><script src="admin.js"></script>
+</body></html>
